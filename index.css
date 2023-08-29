@@ -28,6 +28,7 @@
     --spacing-md: 16px;
     --spacing-lg: 32px;
     --spacing-xl: 64px;
+    --standard-width: 1144px;
     --subtitle-size: 17px;
     --subtitle-height: 26px;
     --button-size: 16px;
@@ -41,6 +42,11 @@ body {
     margin: 0;
     box-sizing: border-box;
     padding: var(--spacing-sm);
+    background-color: var(--purple-1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
@@ -183,4 +189,68 @@ p {
 
 .with-icon:hover>img {
     transform: translateX(5px)
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--standard-width);
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.menu a {
+    color: var(--test-light);
+    margin: 0 var(--spacing-md);
+    font-weight: bold;
+
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.navbar-button {
+    background: rgba(250, 250, 250, .25);
+}
+
+.navbar-button:hover {
+    background: rgba(250, 250, 250, .05);
+}
+
+.section-container {
+    width: 100%;
+    max-width: var(--standard-width);
+}
+
+.two-column {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.two-column>.col-left {
+    width: 50%;
+    padding: 0 var(--spacing-md) 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.two-column>.col-right {
+    width: 50%;
+    padding: 0 0 0 var(--spacing-md);
+    align-items: start;
+    justify-content: center;
 }
